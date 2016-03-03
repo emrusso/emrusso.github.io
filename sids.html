@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<!-- https://www.youtube.com/watch?v=Q26M8qHESFA - safe sleep campaign video-->
+<!-- owlet - http://www.owletcare.com/ -->
+<html>
+<head>
+	<title>Sudden Infant Death Syndrome</title>
+	<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+	<style>
+		body, html {
+			height: 100%;
+			color: white;
+		    font-family: 'Montserrat', sans-serif;
+		}
+		.nav {
+			width: 100%;
+		}
+		.section {
+			display: inline-block;
+			margin-left: 6%;
+			margin-right: 6%;
+			padding: 1%;
+			border: 2px solid white;
+			font-size: 1.5vw;
+		}
+		.section:hover {
+			background-color: rgba(255, 255, 255, 0.3);
+		}
+		a .section {
+			color: white;
+			text-decoration: none;
+		}
+		.content {
+			min-height: 100%;
+			padding-top: 20px;
+		    margin-bottom: 15px;
+		    padding-bottom: 20px;
+		}
+		#whatis {
+			background-color: #FFBD52;
+		}
+		.big {
+			font-size: 6.5vw;
+			padding: 15px;
+		}
+		.cite a {
+			color: white;
+			text-decoration: none;
+		}
+		.text {
+			width: 75%;
+			text-align: justify;
+			padding: 0 0 5% 10%;
+			font-size: 2vw;
+		}
+		em {
+			font-size: 2.5vw;
+		}
+		#citations {
+			background-color: #6E6E6E;
+		}
+		.full_citation {
+			margin-left: 2em;
+			padding: 1%;
+			text-indent: -2em; 
+			line-height: 300%;
+		}
+		.full_citation em {
+			font-size: inherit;
+		}
+		#causes {
+			background-color: #F79F81;
+		}
+		#recommendations ul {
+			margin-top: -0.5%;
+		}
+			#prevention {
+			background-color: #A9F5A9;		
+		}
+		#future_steps {
+			background-color: #2E9AFE;
+		}
+		#safe_sleep {
+			margin: 2% 0 2% 0;
+		}
+		#recommendations {
+			height: 315px;
+			margin-top: -350px;
+			margin-left: 600px;
+			text-align: left;
+		}
+		#additional {
+			margin-top: 8%;
+		}
+		#additional ul{
+			margin-top: -2%;
+			margin-left: 6%;
+		}
+		.more {
+			width: 75%;
+			margin-left: 5%;
+			font-style: italic;
+			font-size: 1.5vw;
+			margin-top: 1%;
+		}
+		#copy {
+			color: black;
+			margin-bottom: 1%;
+		}
+		#co-sleep {
+			margin-left: 6%;
+		}
+	</style>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+	<script>
+		$(function() {
+  			$('a[href*="#"]:not([href="#"])').click(function() {
+    			if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      				var target = $(this.hash);
+      				target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      				if (target.length) {
+        				$('html, body').animate({
+          				scrollTop: target.offset().top
+        			}, 1000);
+        		return false;
+      			}
+    		}
+  		});
+	});
+	</script>
+</head>
+<body>
+	<div id = "whatis" class = "content">
+	<div class = "nav">
+		<a href="#whatis"><div class = "section">What is SIDS?</div></a>
+		<a href="#causes"><div class = "section">Causes</div></a>
+		<a href="#prevention"><div class = "section">Prevention</div></a>
+		<a href="#future_steps"><div class = "section">Future Research</div></a>
+	</div>
+		<div class = "big"> SIDS, what is</div>
+		<div class = "text"> "Sudden infant death syndrome (SIDS), sometimes referred to as crib death, is the <em>sudden unexpected death</em> of a child <em>younger than one year</em> <em>during sleep</em> that <em>cannot be explained</em> after a postmortem evaluation including autopsy, a thorough history, and scene evaluation."<span class = "cite"><a href="first" style="font-size: 1vw;">(Adams, Ward, Garcia 2015)</a></span> <br><br>
+		SIDS is the <em>leading cause of death</em> between one month and one year of age.<span class = "cite"><a href = "#first"><sup>[1]</sup></a></span>
+		</div>
+	</div>
+	<div id = "causes" class = "content">
+	<div class = "nav">
+		<a href="#whatis"><div class = "section">What is SIDS?</div></a>
+		<a href="#causes"><div class = "section">Causes</div></a>
+		<a href="#prevention"><div class = "section">Prevention</div></a>
+		<a href="#future_steps"><div class = "section">Future Research</div></a>
+	</div>
+		<div class = "big"> Causes </div>
+		<div class = "text"> While the specific causes of SIDS are largely unknown, most agree that SIDS may occur when three risk factors coincide. These risk factors are:
+		<ol>
+			<li>When an infant has an genetic vulnerability
+			<div class = "more">A genetic vulnerability can be considered a predisposition for an abnomality in "cardiac and respiratory control in the brainstem"</div>
+			</li>
+			<li>
+				When an infant is in a critical development period
+				<div class = "more">SIDS-related deaths peak between two and four months of age</div>
+			</li>
+			<li>
+				When an infant is placed in a stressful sleeping environment
+				<div class = "more">Types of environmental stress can include an improper sleeping position,
+				exposure to tobacco smoke, or a sleeping environment that is too hot</div>
+			</li>
+			</ol>
+		When these factors combine, it is possible that an infant will stop breathing and die from lack of oxygen.<span class = "cite"><a href="#first"><sup>[1]</sup></a></span>
+		<h3>Co-Sleeping</h3>
+		<div id = "co-sleep">Co-sleeping has been frequently associated with SIDS-related deaths and SUDI (sudden unexplained death in infancy) deaths. While this risk factor is controversial, there is a significant correlation between co-sleeping and occurance of a SUDI death. Infants are particularly at risk if the caretaker they are co-sleeping with has recently used drugs or alcohol. Infants younger than 6 months are also at an additional risk for SUDI or SIDS when co-sleeping.<span class="cite"><a href="#fourth"><sup>[4]</sup></span></div>
+		</div>
+	</div>
+	<div id = "prevention" class = "content">
+	<div class = "nav">
+		<a href="#whatis"><div class = "section">What is SIDS?</div></a>
+		<a href="#causes"><div class = "section">Causes</div></a>
+		<a href="#prevention"><div class = "section">Prevention</div></a>
+		<a href="#future_steps"><div class = "section">Future Research</div></a>
+	</div>
+		<div class = "big"> Prevention </div>
+		<div class = "text">The occurance of SIDS has decreased by over 50% since 1992. This decrease is largely due to the introduction of the Back to Sleep campaign. This campaign advises caretakers to place infants on their backs to sleep<span class = "cite"><a href="#first"><sup>[1]</sup></a></span>. The Back to Sleep campaign has since expanded as the Safe to Sleep campaign to include additional recommendations regarding sleep environments.
+		<div id = "safe_sleep">
+				<h3>Building a Safe Sleep Environment<span class = "cite"><a href = "#second"><sup>[2]</sup></a></span></h3>
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/Q26M8qHESFA" frameborder="0" allowfullscreen></iframe>
+		<div id="recommendations">
+		The NIH recommends that an infant sleep
+		<ul>
+		<li>on their back on firm bedding</li>
+		<li>in their own crib, free of blankets, pillows, or soft stuffed animals</li>
+		<li>in a shared room with their caretaker</li>
+		<li>in a smoke-, alcohol-, and drug-free environment</li></ul>
+		</div></div>
+		<div id="additional">
+		<h3>Additional Recommendations<span class = "cite"><a href = "#second"><sup>[2]</sup></a></span></h3>
+		<ul>
+		<li>pregnant women should not smoke, use alcohol, or drugs</li>
+		<li>breastfeeding has been shown to have a protective effect</li>
+		<li>parents should consider giving the infant a pacifier during sleep</li>
+		<li>to prevent flat spots on the back of the head, infants should spend some time on their stomach when awake and supervised</li> 
+		</ul>
+		</div>
+		</div>
+	</div>
+	<div id = "future_steps" class = "content">
+	<div class = "nav">
+		<a href="#whatis"><div class = "section">What is SIDS?</div></a>
+		<a href="#causes"><div class = "section">Causes</div></a>
+		<a href="#prevention"><div class = "section">Prevention</div></a>
+		<a href="#future_steps"><div class = "section">Future Research</div></a>
+	</div>
+		<div class = "big"> Future Steps </div>
+		<div class = "text"> SIDS affects African American and Native American babies disproportionately. Infants from these groups are at twice the risk for SIDS. This is largely due to cultural differences in sleep environments and practices. One of these practices is bed-sharing which can increase risk of SIDS. Additionally, poor infants are more likely to co-sleep and are thus at a higher risk for SIDS<span class = "cite"><a href = "#first"><sup>[1]</sup></a></span>. African American infants that have died from SIDS often died while co-sleeping or on a non-standard sleep surface<span class = "cite"><a href = "#third"><sup>[3]</sup></a></span>. Future research should be performed to discover how to design and implement effective interventions and information campaigns targeted to these groups.</div>
+		</div>
+
+	<div id = "citations" class = "content">
+		<div class = "big"> Citations </div>
+	<div class = "full_citation" id = "first">1. Adams, S. M., Ward, C. E., & Garcia, K. L. (2015). Sudden Infant Death Syndrome. <em>American Family Physician, 91</em> (11), 778-783.</div>
+	<div class = "full_citation" id = "second">2. American Academy of Pediatrics, Task Force on Sudden Infant Death Syndrome. (2011). SIDS and Other Sleep-Related Infant Deaths: Expansion of Recommendations for a Safe Infant Sleeping Environment. Retrieved from http://www.ncbi.nlm.nih.gov/pubmed/22007004</div>
+	<div class = "full_citation" id = "third">3. Unger, B., Kemp, J. S., Wilkins, D., Psara, R., Ledbetter, T., Graham, M.,...Thach, B. T. (2003). Racial Disparity and Modifiable Risk Factors Among Infants Dying Suddenly and Unexpectedly.<em>Pediatrics, 111</em> (2), e127-e131.</div>
+	<div class = "full_citation" id = "fourth">4. Weber, M. A., Risdon, R. A., Ashworth, M. T., Malone, M., & Sebire, N. J. (2011). Autopsy findings of co-sleeping-associated sudden unexpected deaths in infancy: Relationship between pathological features and asphyxial mode of death. <em>Journal of Paediatrics and Child Health, 48</em>, 335-341.</div>
+	</div>
+	<center><div id="copy">Emmi Russo, PSYC 23600, March 2016</div></center>
+</body>
+</html>
