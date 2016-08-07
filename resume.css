@@ -1,0 +1,131 @@
+body, html {
+	margin: 0 auto;
+	height: 100%;
+}
+
+body {
+	font-family: 'Raleway', sans-serif;
+}
+
+h2,h3,h4,h5,h6 {
+	font-weight: normal;
+}
+
+#name {
+	padding: 2% 52% 2% 2%;
+	font-size: 3em;
+	width: 20%;
+	display: inline-block;
+	-webkit-animation: bordermove 3s 1; /* Chrome, Safari, Opera */
+    animation: bordermove 3s 1;
+    background-color: #0080FF;
+   	color: white;
+}
+
+#contact {
+	display: inline-block;
+	width: 20%;
+	padding: 2% 0 2% 2%;
+    margin-left: 3%;
+    opacity: 100%;
+    -webkit-animation: vis 6s 1; /* Chrome, Safari, Opera */
+	animation: vis 6s 1;
+}
+
+.first {
+	-webkit-animation: vis 6s 1; /* Chrome, Safari, Opera */
+	animation: vis 6s 1;
+}
+
+.second {
+	-webkit-animation: vis 9s 1; /* Chrome, Safari, Opera */
+	animation: vis 9s 1;
+}
+
+.third {
+	-webkit-animation: vis 12s 1; /* Chrome, Safari, Opera */
+	animation: vis 12s 1;
+}
+
+.fourth {
+	-webkit-animation: vis 15s 1; /* Chrome, Safari, Opera */
+	animation: vis 15s 1;
+}
+
+.fifth {
+	-webkit-animation: vis 18s 1; /* Chrome, Safari, Opera */
+	animation: vis 18s 1;
+}
+
+.sixth {
+	-webkit-animation: vis 21s 1; /* Chrome, Safari, Opera */
+	animation: vis 21s 1;
+}
+
+h5 {
+	margin: 0.5%;
+	margin-left:0;
+}
+
+#container {
+	width: 75%;
+	margin-left: 12.5%;
+	padding-bottom: 2%
+}
+
+a {
+	color: #0080FF;
+	text-decoration: none;
+	transition: color 0.6s;
+}
+
+a:hover {
+	color: #045FB4;
+}
+
+h3 {
+	margin-bottom: 1%;
+}
+
+.spaced {
+	margin-left: 65%;
+}
+
+
+li {
+	font-size: 0.8em;
+	margin-top: 0.8%;
+}
+
+ul {
+	margin: 0;
+}
+
+ul > :first-child {
+	margin-top:0;
+}
+
+/* Chrome, Safari, Opera */ 
+@-webkit-keyframes bordermove {
+    from {padding-right: 1%;}
+    to {padding-right: 52%;}
+} 
+
+/* Standard syntax */ 
+@keyframes bordermove {
+    from {padding-right: 1%;}
+    to {padding-right: 52%;}
+}
+
+/* Chrome, Safari, Opera */ 
+@-webkit-keyframes vis {
+    from {opacity: 0;}
+    to {opacity: 100%;}
+} 
+
+/* Standard syntax */ 
+@keyframes vis {
+    from {opacity: 0;}
+    to {opacity: 100%;}
+}
+
