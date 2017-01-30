@@ -1,4 +1,4 @@
-Coder,Subject,Num items (including laptop if used),Gender,Times Distracted,Laptop?
+Coder,Subject,Items,Gender,Times_Distracted,Laptop
 ER,1,2,M,1,Y
 ER,2,8,M,0,Y
 ER,3,2,M,2,Y
