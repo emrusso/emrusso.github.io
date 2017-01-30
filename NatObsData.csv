@@ -1,0 +1,41 @@
+Coder,Subject,Num items (including laptop if used),Gender,Times Distracted,Laptop?
+ER,1,2,M,1,Y
+ER,2,8,M,0,Y
+ER,3,2,M,2,Y
+ER,4,3,F,1,Y (not actively using)
+ER,5,1,M,0,Y
+ER,6,3,F,1,N
+ER,7,4,F,1,Y (not actively using)
+ER,8,3,F,0,Y
+ER,9,1,F,0,Y
+ER,10,6,F,1,Y
+SS,1,3,M,0,Y
+SS,2,6,M,4,Y
+SS,3,4,F,1,Y
+SS,4,5,F,0,Y (not actively using)
+SS,5,2,F,1,Y
+SS,6,7,F,0,N
+SS,7,9,F,1,Y
+SS,8,5,F,0,Y
+SS,9,4,M,1,Y
+SS,10,6,M,0,N
+JS,1,8,F,1,Y (not actively using)
+JS,2,4,M,1,Y
+JS,3,4,F,0,N
+JS,4,6,F,2,Y
+JS,5,7,M,4,Y
+JS,6,5,F,2,Y
+JS,7,5,F,0,N
+JS,8,13,M,0,Y
+JS,9,5,F,1,Y
+JS,10,2,F,1,Y
+TGF,1,3,F,1,Y
+TGF,2,3,F,2,N
+TGF,3,3,F,0,N
+TGF,4,5,F,0,N
+TGF,5,2,M,1,N
+TGF,6,3,M,1,N
+TGF,7,3,M,5,Y (not actively using)
+TGF,8,1,M,1,Y
+TGF,9,3,M,1,Y
+TGF,10,4,F,5,N
