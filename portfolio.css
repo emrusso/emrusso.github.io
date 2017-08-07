@@ -1,10 +1,15 @@
-body{
-	font-family: sans-serif;
-    background-image: url('background.png');
+html, body {
+    margin: 0;
+    height: 100%;
 }
 
+body{
+	font-family: sans-serif;
+    /*background-image: url('background.png');
+*/}
+
 #portrait{
-	height: 15%;
+	height: 40%;
 	width: 15%;
 	border-radius: 100%;
 	margin: 1% 0 2% 7%;
@@ -13,18 +18,18 @@ body{
     border-bottom: 1px dashed #3A1549;
 }
 
-#bio{
+/*#bio{
     color: #3A1549;
     width: 50%;
     margin-bottom: 2%;
-    margin: -20% 0 0 27%;
+    margin: 0% 0 0 27%;
     font-size: 2vw;
     padding: 1% 0 1% 3%;
     border-left: 1px solid #3A1549;
     font-family: 'Roboto Slab', serif;
 }
-
-.about_chunk{
+*/
+/*.about_chunk{
     color: #3A1549;
     width: 50%;
     margin-bottom: 2%;
@@ -33,7 +38,7 @@ body{
     padding: 1% 0 1% 3%;
     border-left: 1px solid #3A1549;
     font-family: 'Roboto Slab', serif;
-}
+}*/
 
 .project{
     height: 80%;
