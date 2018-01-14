@@ -5,9 +5,9 @@ angular.module('resumeApp', [])
     var resumeApp = this;
 
 	var techSkills = new Array();
-	techSkills['proficient'] = ['C', 'HTML5', 'CSS3', 'JavaScript', 'AngularJS', 'Git'];
-	techSkills['comfortable'] = ['Ruby on Rails', 'Java', 'Sass', 'Protocol Buffers', 'Bash'];
-	techSkills['exposure'] = ['SML', 'PHP', 'R', 'Typed Racket', 'Python', 'SVN', 'MySQL', 'Google Cloud Platform', 'Bootstrap'];
+	techSkills['proficient'] = ['HTML5', 'CSS3', 'JavaScript', 'jQuery', 'Java', 'Git'];
+	techSkills['comfortable'] = ['AngularJS', 'C', 'Ruby on Rails', 'Sass', 'Protocol Buffers', 'Bash'];
+	techSkills['exposure'] = ['Python', 'R', 'SML', 'PHP', 'SVN', 'MySQL', 'Bootstrap', 'Google Cloud Platform'];
 	this.techSkills = techSkills;
 
 	
@@ -16,7 +16,7 @@ angular.module('resumeApp', [])
 		'June 2017', 'September 2017',
 		['Wrote and deployed industry-standard code in a fast-paced, agile development workflow',
 		'Implemented an interactive widget as a tool for Square\'s API documentation website using Ruby on Rails, JavaScript, HTML, Sass, and Square\'s e-commerce Rails SDK',
-		'Placed third in Intern Hack Week by using Ruby on Rails, MySQL, Slim, HTML, and SCSS to add automated and custom visual achievement badges to Square\'s internal HR website with two other interns']);
+		'Placed third in Intern Hack Week by using Ruby on Rails, MySQL, Slim, HTML, and SCSS to add automated and custom visual achievement badges to Square\'s internal corporate directory with two other interns']);
 	this.experiences[1] = new Experience('Google', 'Seattle, WA', 'Engineering Practicum Intern',
 		'June 2016', 'September 2016',
 		["Built a guided flow that allows Cloud Launcher solution partners to control the configuration options available to the customers deploying these solutions",
