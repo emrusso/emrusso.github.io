@@ -65,7 +65,7 @@ function Trial(number, entries) {
   for(key in entries) {
     var entry = entries[key];
     if(entry["TRIAL"] == number) {
-      if(number == -1) {
+      if(number < 0) {
         as.push(entry);
         bs.push(entry);
       } else {
@@ -88,6 +88,7 @@ var testTrial = new Trial()
 var trialObjs = $.csv.toObjects(trialsStr);
 // ## reorganize trials
 var trials = [new Trial(-1, trialObjs)];
+trials.push(new Trial(-2, trialObjs));
 for(var i = 0; i < 10; i++) {
   var t = new Trial(i + 1, trialObjs);
   trials.push(t);
@@ -166,6 +167,7 @@ for(var i = 0; i < 5; i++) {
 }
 
 myTrialOrder.push({"t": 0, "v": "a", "trial": trials[0]});
+myTrialOrder.push({"t": 1, "v": "a", "trial": trials[1]});
 //randomize order
 for(var i = 0; i < 10; i++) {
   trial = randomVersion(testTrialNums);
@@ -216,8 +218,6 @@ var experiment = {
     var i = experiment.curr_i;
     var j = experiment.curr_j;
 
-    console.log(experiment.curr_trial);
-
     if(experiment.show_begin) {
       showSlide("begin");
     }
@@ -256,7 +256,7 @@ var experiment = {
       }
     }
 
-    if(experiment.curr_trial["t"] == 0 && !experiment.show_ac && !experiment.show_begin) {
+    if(experiment.curr_trial["t"] < 2 && !experiment.show_ac && !experiment.show_begin) {
       showSlide("sample");
 
       if(experiment.curr_j == 0) {
@@ -270,7 +270,7 @@ var experiment = {
       $(".word" + experiment.curr_j).parent(".underline").addClass("selected");
     }
 
-    if(!experiment.show_ac && experiment.curr_trial["t"] > 0 && !experiment.show_begin) {
+    if(!experiment.show_ac && experiment.curr_trial["t"] >= 2 && !experiment.show_begin) {
       showSlide("stage");
       startTime = (new Date()).getTime();
       //if start of new utterance
@@ -321,12 +321,16 @@ var experiment = {
         experiment.next_word();
       } else if((keyCode == F || keyCode == J) && experiment.show_ac) {
         
-        if(experiment.curr_trial["t"] == 0) {
+        if(experiment.curr_trial["t"] < 2) {
           if(keyCode != experiment.correctKeyCode) {
             $(document).one("keydown", keyPressHandler);
             return;
           }
-          experiment.show_begin = true;
+
+          if(experiment.curr_trial["t"] == 1) {
+            experiment.show_begin = true;
+          }
+
           experiment.show_ac = false;
           experiment.ct_index++;
           experiment.curr_trial = experiment.trials[experiment.ct_index];
@@ -334,7 +338,14 @@ var experiment = {
           experiment.curr_i = 0;
           experiment.curr_j = 0;
           experiment.passed_ac = false;
-          experiment.next_word();
+          if(experiment.curr_trial["t"] == 1) {
+            showSlide("nextSample");
+            setTimeout(function() {
+              experiment.next_word()
+            }, 2000);
+          } else {
+            experiment.next_word();
+          }
           return;
         }
 
