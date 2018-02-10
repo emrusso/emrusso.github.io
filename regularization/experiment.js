@@ -112,12 +112,14 @@ function randomElement(array) {
 }
 
 function randomVersion(testTrialNums) {
+  //FIX THIS YOU ARE MISSING TRIAL 11
+
   var t = randomInteger(10);
   var v = "b";
-  if(testTrialNums.includes(t)) {
+  if(testTrialNums.includes(t + 2)) {
     v = "a";
   }
-  return {"t" : t+1, "v" : v, "trial" : trials[t+1]};
+  return {"t" : t+2, "v" : v, "trial" : trials[t+2]};
 }
 
 function generateUnderlines(words) {
@@ -158,9 +160,9 @@ var seenTrials = [];
 var seenTestTrialNums = [];
 var testTrialNums = [];
 for(var i = 0; i < 5; i++) {
-  var t = randomInteger(10);
+  var t = randomInteger(10) + 2;
   while(seenTestTrialNums.includes(t)) {
-    t = randomInteger(10);
+    t = randomInteger(10) + 2;
   }
   testTrialNums.push(t);
   seenTestTrialNums.push(t);
