@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html ng-app="uccheerApp">
+
+<head>
+    <title>UC Cheer</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+    <script src="cheer.js"></script>
+    <script src="roster.js"></script>
+    <link rel="stylesheet" href="https://identity.uchicago.edu/c/fonts/proximanova.css">
+    <link rel="stylesheet" href="uccheer.css">
+
+    <!-- Smooth scrolling -->
+    <script>
+    $(function() {
+        $('a[href*="#"]:not([href="#"])').click(function() {
+            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                if (target.length) {
+                    $('html, body').animate({
+                        scrollTop: target.offset().top
+                    }, 1000);
+                    return false;
+                }
+            }
+        });
+    });
+    </script>
+</head>
+
+<body ng-controller="CheerController as cheerCtrl">
+    <div ng-if="!cheerCtrl.isMobile" id="mega-container">
+        <div id="landing">
+            <img class="landing-logo" alt="logo" src="Media/Cheerleading_REV.png" />
+            <div class="navbar">
+                <div class="link">
+                    <h4><a href ="#about">ABOUT</a></h4></div>
+                <div class="link">
+                    <h4><a href ="#roster">ROSTER</a></h4></div>
+                <div class="link">
+                    <h4><a href ="#join">JOIN</a></h4></div>
+                <div class="link">
+                    <h4><a href ="#photos">PHOTOS</a></h4></div>
+                <div class="link">
+                    <h4><a href ="#donate">DONATE</a></h4></div>
+            </div>
+        </div>
+        <div id="about">
+            <div class="overlay">
+                <div class="nav-wrapper">
+                    <div class="navbar">
+                        <div class="link">
+                            <h2><a href ="#about">ABOUT</a></h2></div>
+                        <div class="link">
+                            <h4><a href ="#roster">ROSTER</a></h4></div>
+                        <div class="link">
+                            <h4><a href ="#join">JOIN</a></h4></div>
+                        <div class="link">
+                            <h4><a href ="#photos">PHOTOS</a></h4></div>
+                        <div class="link">
+                            <h4><a href ="#donate">DONATE</a></h4></div>
+                    </div>
+                </div>
+                <div class="content">
+                    The cheer team at the University of Chicago attends home football games during the fall, and home men's and women's basketball games in the winter. We bring spirit to Maroon athletic events by cheering, stunting, and dancing! All skill levels are welcome on the team.
+                    <br>
+                    <br> Follow us on social media by liking our <b><a href="https://www.facebook.com/UCCheer/" target="_blank">Facebook page</a></b>!
+                </div>
+            </div>
+        </div>
+        <div id="roster">
+            <div class="nav-wrapper">
+                <div class="navbar">
+                    <div class="link">
+                        <h4><a href ="#about">ABOUT</a></h4></div>
+                    <div class="link">
+                        <h2><a href ="#roster">ROSTER</a></h2></div>
+                    <div class="link">
+                        <h4><a href ="#join">JOIN</a></h4></div>
+                    <div class="link">
+                        <h4><a href ="#photos">PHOTOS</a></h4></div>
+                    <div class="link">
+                        <h4><a href ="#donate">DONATE</a></h4></div>
+                </div>
+            </div>
+            <div class="content">
+                <table>
+                    <tr ng-repeat="row in cheerCtrl.roster_by_rows">
+                        <td ng-repeat="entry in row">
+                            <div class="entry-container" ng-style="{ 'background-image': 'url({{entry.photo}})'}">
+                                <div class="{{entry.class}}">
+                                    <div class="roster-info-text">
+                                        <h2 class="roster-firstname">{{entry.first}}</h2>
+                                        <h2 class="roster-lastname"><b class="extra"> {{entry.last}}</b></h2>
+                                        <br>
+                                        <br>
+                                        <b>Year:</b> {{entry.year}}
+                                        <br>
+                                        <br>
+                                        <b>Major:</b> {{entry.major}}
+                                        <div style="display: inline-block" ng-if="entry.hs != ''">
+                                            <br>
+                                            <b>High School:</b> {{entry.hs}}
+                                        </div>
+                                        <br>
+                                        <br>
+                                        <b>Hometown:</b> {{entry.hometown}}
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div id="join">
+            <div class="overlay">
+                <div class="nav-wrapper">
+                    <div class="navbar">
+                        <div class="link">
+                            <h4><a href ="#about">ABOUT</a></h4></div>
+                        <div class="link">
+                            <h4><a href ="#roster">ROSTER</a></h4></div>
+                        <div class="link">
+                            <h2><a href ="#join">JOIN</a></h2></div>
+                        <div class="link">
+                            <h4><a href ="#photos">PHOTOS</a></h4></div>
+                        <div class="link">
+                            <h4><a href ="#donate">DONATE</a></h4></div>
+                    </div>
+                </div>
+                <div class="content">
+                    The UChicago cheer team is a co-ed sports club that cheers, stunts, and dances at home football and basketball games. We welcome all skill levels on our squad.
+                    <br>
+                    <br> We are currently looking for new talent to join our team for our 2018 basketball season! If you wish to join UC Cheer, please see our <b><a href="https://www.facebook.com/UCCheer/" target="_blank">Facebook page</a></b> for information regarding open practices and tryouts or contact Daniel Schwartz at <b><a href="mailto:cheerleader@uchicago.edu">cheerleader@uchicago.edu</a></b> for more information.
+                </div>
+            </div>
+        </div>
+        <div id="photos">
+            <div class="nav-wrapper">
+                <div class="navbar">
+                    <div class="link">
+                        <h4><a href ="#about">ABOUT</a></h4></div>
+                    <div class="link">
+                        <h4><a href ="#roster">ROSTER</a></h4></div>
+                    <div class="link">
+                        <h4><a href ="#join">JOIN</a></h4></div>
+                    <div class="link">
+                        <h2><a href ="#photos">PHOTOS</a></h2></div>
+                    <div class="link">
+                        <h4><a href ="#donate">DONATE</a></h4></div>
+                </div>
+            </div>
+            <div class="content">
+                <table>
+                    <tr ng-repeat="row in cheerCtrl.albums_by_rows">
+                        <td ng-repeat="entry in row">
+                            <a href="{{entry.link}}" target="_blank">
+                                <div class="album-container" ng-style="{ 'background-image': 'url({{entry.cover}})'}">
+                                    <div class="album-info">
+                                        <div class="album-info-text">
+                                            <h2>{{entry.title}}</h2>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div id="donate">
+            <div class="overlay">
+                <div class="nav-wrapper">
+                    <div class="navbar">
+                        <div class="link">
+                            <h4><a href ="#about">ABOUT</a></h4></div>
+                        <div class="link">
+                            <h4><a href ="#roster">ROSTER</a></h4></div>
+                        <div class="link">
+                            <h4><a href ="#join">JOIN</a></h4></div>
+                        <div class="link">
+                            <h4><a href ="#photos">PHOTOS</a></h4></div>
+                        <div class="link">
+                            <h2><a href ="#donate">DONATE</a></h2></div>
+                    </div>
+                </div>
+                <div class="content">
+                    <div>Please <b><a href="https://www.kintera.org/site/c.mjJXJ7MLIsE/b.4668703/k.BE96/Make_a_gift_online/apps/ka/sd/donorcustom.asp" target ="_blank">donate</a></b> to help support UC Cheer!</div>
+                    <br>
+                    <div>The UChicago cheerleading team receives some funds from the university's sport club allocations as well as from our own fundraising efforts on campus. However, these amounts are not nearly enough to cover the cost of our gear (uniforms, poms, megaphones, etc.) or the cost of attending competitions. Any help you'd be willing to provide would be deeply appreciated. Please leave us your name and address when you donate; we'd love to send you a cheerful thank you note! </div>
+                    <br>
+                    <div>You can donate <b><a href="https://www.kintera.org/site/c.mjJXJ7MLIsE/b.4668703/k.BE96/Make_a_gift_online/apps/ka/sd/donorcustom.asp" target="_blank">here</a></b> which will take you to the University's page set up for RSO and Sport Club donations. After selecting the "ORCSA-Student Activities (specify RSO)" option in the "Area of Giving" drop-down menu at the link above, you can earmark the funds for Cheerleading by simply indicating in the "Comment" box of the "Special Instructions" section at the bottom of the page which RSO (i.e. Sport Club) you'd like the funds to go to.</div>
+                    <br>
+                    <div>We also happily accept checks made out to "The University of Chicago Cheerleading", which can be mailed to the treasurer for depositing. For more information, contact Daniel Schwartz at <b><a href="mailto:cheerleader@uchicago.edu">cheerleader@uchicago.edu</a></b>.</div>
+                </div>
+            </div>
+        </div>
+        <a href="https://emrusso.github.io" target="_blank">
+            <div id="footer">
+                Original Design &copy; Emmi Russo, 2017
+            </div>
+        </a>
+    </div>
+    <!-- MOBILE DISPLAY -->
+    <div ng-if="cheerCtrl.isMobile" class="mobile-mega-container">
+        <div id="mobile-landing">
+            <img class="mobile-landing-logo" alt="logo" src="Media/Cheerleading_Maroon.png" />
+            <div class="mobile-navbar">
+                <div class="link">
+                    <h4><a href ="#mobile-about">ABOUT</a></h4></div>
+                <div class="link">
+                    <h4><a href ="#mobile-roster">ROSTER</a></h4></div>
+                <div class="link">
+                    <h4><a href ="#mobile-join">JOIN</a></h4></div>
+                <div class="link">
+                    <h4><a href ="#mobile-photos">PHOTOS</a></h4></div>
+            </div>
+        </div>
+        <div id="mobile-about">
+            <h1>ABOUT</h1>
+            <div class="mobile-content">
+                The cheer team at the University of Chicago attends home football games during the fall, and home men's and women's basketball games in the winter. We bring spirit to Maroon athletic events by cheering, stunting, and dancing! All skill levels are welcome on the team.
+                <br>
+                <br> Follow us on social media by liking our <b><a href="https://www.facebook.com/UCCheer/" target="_blank">Facebook page</a></b>!
+            </div>
+        </div>
+        <div id="mobile-roster">
+            <h1>ROSTER</h1>
+            <div class="mobile-content">
+                <div ng-repeat="entry in cheerCtrl.roster" class="roster-link">
+                    <a href="{{entry.link}}">{{entry.name}}</a>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-join">
+            <h1>JOIN</h1>
+            <div class="mobile-content">
+                The UChicago cheer team is a co-ed sports club that cheers, stunts, and dances at home football and basketball games. We welcome all skill levels on our squad.
+                <br>
+                <br> We are currently looking for new talent to join our team for our 2018 basketball season! If you wish to join UC Cheer, please see our
+                <b><a href="https://www.facebook.com/UCCheer/" target="_blank">Facebook page</a></b> for information regarding open practices and tryouts or contact Daniel Schwartz at <b><a href="mailto:cheerleader@uchicago.edu">cheerleader@uchicago.edu</a></b> for more information.
+            </div>
+        </div>
+        <div id="mobile-photos">
+            <h1>PHOTOS</h1>
+            <div class="mobile-content">
+                <div ng-repeat="entry in cheerCtrl.albums" class="album-link">
+                    <a href="{{entry.link}}" target="_blank">
+              {{entry.title}}
+            </a>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-footer">
+            <a href="https://emrusso.github.io" target="_blank">
+                Original Design &copy; Emmi Russo, 2017
+            </a>
+        </div>
+    </div>
+</body>
+
+</html>
