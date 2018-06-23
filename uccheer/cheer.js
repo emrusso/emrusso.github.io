@@ -7,7 +7,6 @@ angular.module('uccheerApp', [])
         this.roster = JSON.parse(roster)
         for (var i in this.roster) {
             var cheerleader = this.roster[i]
-            console.log(cheerleader)
             cheerleader.link = cheerleader.first + ".html"
             cheerleader.hasRosterPicture = cheerleader.hasRosterPicture.toLowerCase()
             if (cheerleader.hasRosterPicture == "yes") {

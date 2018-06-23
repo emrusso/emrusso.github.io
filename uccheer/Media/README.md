@@ -82,11 +82,8 @@ images [here](https://developers.google.com/speed/docs/insights/OptimizeImages).
 I wrote a bash script for you to run and it will adjust all of the JPEGs in /Media
 Run as `sh convert_media.sh`
 
-## Traffic
-You can see traffic at 
-
 ## Uploading to UChicago server
-Follow the UC IT [instructions](https://uchicago.service-now.com/it?id=kb_article&kb=KB00015299) to upload with Cyberduck.
+Follow the UC IT [instructions](https://uchicago.service-now.com/it?id=kb_article&kb=KB00015299)
 
 ## Immediate concerns
 - Update roster
