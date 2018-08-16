@@ -6,8 +6,8 @@ angular.module('resumeApp', [])
 
 	var techSkills = new Array();
 	techSkills['proficient'] = ['HTML5', 'CSS3', 'JavaScript', 'jQuery', 'Java', 'Git'];
-	techSkills['comfortable'] = ['AngularJS', 'C', 'Ruby on Rails', 'Sass', 'Protocol Buffers', 'Bash'];
-	techSkills['exposure'] = ['Python', 'R', 'SML', 'PHP', 'SVN', 'MySQL', 'Bootstrap', 'Google Cloud Platform'];
+	techSkills['comfortable'] = ['AngularJS', 'R', 'Python', 'C', 'Ruby on Rails', 'Sass', 'Protocol Buffers', 'Bash'];
+	techSkills['exposure'] = ['SML', 'PHP', 'SVN', 'MySQL', 'Bootstrap', 'Google Cloud Platform'];
 	this.techSkills = techSkills;
 
 	
@@ -27,8 +27,8 @@ angular.module('resumeApp', [])
 		"Implemented a Java handler for electron shell configuration and chemical formula knowledge graph facts to add and render the appropriate subscript/superscript information"]);
 
 	this.activities = new Array();
-	this.activities[0] = new Activity("The Communication and Learning Lab,", "Chicago, IL", "Honors Thesis Researcher", "Winter 2017 - Present", "http://callab.uchicago.edu/");
-	this.activities[1] = new Activity("University of Chicago Cheer Squad,", "Chicago, IL", "Secretary / Member / Former Captain", "Fall 2014 - Present", "http://cheerleading.uchicago.edu/");
+	this.activities[0] = new Activity("The Communication and Learning Lab,", "Chicago, IL", "Honors Thesis Researcher", "Winter 2017 - Spring 2018", "http://callab.uchicago.edu/");
+	this.activities[1] = new Activity("University of Chicago Cheer Squad,", "Chicago, IL", "Secretary / Member / Former Captain", "Fall 2014 - Winter 2018", "http://cheerleading.uchicago.edu/");
 	this.activities[2] = new Activity("Grace Hopper Celebration of Women in Technology", "", "Google Grant Recipient", "October 2015, 2016", "http://ghc.anitaborg.org/");
 	this.activities[3] = new Activity("The Infant Learning and Development Lab,", "Chicago, IL", "Research Assistant", "Fall 2015 - Fall 2016", "http://woodwardlab.uchicago.edu/");
 	this.activities[4] = new Activity("Computer Science Summer Institute,", "Google, Seattle, WA", "Participant", "July - August 2014", "https://www.google.com/edu/resources/programs/computer-science-summer-institute/");
