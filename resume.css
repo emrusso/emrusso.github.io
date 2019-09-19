@@ -34,15 +34,15 @@ h2,h3,h4,h5,h6 {
 	display: inline-block;
 	-webkit-animation: big_bordermove 3s 1;
 	animation: big_bordermove 3s 1;
-	width: 74%;
+	width: 79%;
 	color: white;
 	border-radius: 2px;
 }
 
 #contact {
 	display: inline-block;
-	width: 20%;
-	padding-left: 2%;
+	width: 18%;
+	/* padding-left: 2%; */
 	margin-left: 2%;
 	opacity: 100%;
     -webkit-animation: vis 6s 1;
@@ -56,7 +56,7 @@ h2,h3,h4,h5,h6 {
 
 .first, .second, .third, .fourth, .fifth {
 	padding-left: 2%;
-	width: 72%;
+	width: 77%;
 	opacity: 0;
 }
 
@@ -102,7 +102,7 @@ h5 {
 }
 
 #container {
-	width: 75%;
+	width: 80%;
 	margin-left: 12.5%;
 	padding-bottom: 2%
 }
@@ -130,6 +130,7 @@ h3 {
 li {
 	font-size: 0.8em;
 	margin-top: 0.8%;
+	max-width: 90%;
 }
 
 ul {
@@ -148,20 +149,20 @@ ul > :first-child {
 
 @-webkit-keyframes bordermove {
     from {padding-right: 1%;}
-    to {padding-right: 52%;}
+    to {padding-right: 57%;}
 }
 @keyframes bordermove {
     from {padding-right: 1%;}
-    to {padding-right: 52%;}
+    to {padding-right: 57%;}
 }
 
 @-webkit-keyframes big_bordermove {
     from {width: 1%;}
-    to {width: 74%;}
+    to {width: 79%;}
 }
 @keyframes big_bordermove {
     from {width: 1%;}
-    to {width: 74%;}
+    to {width: 79%;}
 }
 
 @-webkit-keyframes vis {
@@ -186,19 +187,21 @@ ul > :first-child {
 	margin: 0 auto;
 	height: 100%;
 	color: gray;
+	text-align: left;
 }
 
 .mobile-blurb {
 	margin: auto;
 	margin-top: 10%;
 	max-width: 70%;
-	text-align: center;
+	text-align: left;
 	font-size: 4vw;
 	opacity: 0;
 }
 
 
 .mobile-blurb ul {
+	padding-inline-start: 0;
 	margin-top: 4%;
 	text-align: left;
 	list-style-image: url('star.png');

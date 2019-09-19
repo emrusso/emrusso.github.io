@@ -5,33 +5,84 @@ angular.module('resumeApp', [])
     var resumeApp = this;
 
 	var techSkills = new Array();
-	techSkills['proficient'] = ['HTML5', 'CSS3', 'JavaScript', 'jQuery', 'Java', 'Git'];
-	techSkills['comfortable'] = ['AngularJS', 'R', 'Python', 'C', 'Ruby on Rails', 'Sass', 'Protocol Buffers', 'Bash'];
-	techSkills['exposure'] = ['SML', 'PHP', 'SVN', 'MySQL', 'Bootstrap', 'Google Cloud Platform'];
+	techSkills['proficient'] = ['HTML', 'CSS/SCSS', 'TypeScript/JavaScript', 'React', 'Git'];
+	techSkills['comfortable'] = ['jQuery', 'AngularJS', 'C', 'Ruby on Rails', 'Bash', 'Java', 'Azure Data Explorer', 'Microsoft PowerBI'];
+	techSkills['exposure'] = ['Python', 'C#', 'R', 'SML', 'SVN', 'MySQL', 'Google Cloud Platform'];
 	this.techSkills = techSkills;
 
 	
 	this.experiences = new Array();
-	this.experiences[0] = new Experience('Square', 'San Francisco, CA', 'Software Engineer Intern',
+	this.experiences[0] = new Experience('Microsoft', 'Redmond, WA', 'Software Engineer',
+		'August 2018', 'Present',
+	    ["Developed reporting features across Microsoft's Azure DevOps product by writing and reviewing code as a member of one of its only horizontal teams",
+	    "Collaborated closely with product managers and other engineers from start to finish on features - including spec reviews, development design, development, and post-deployment telemetry to measure success and adoption",
+		"Shared knowledge with teammates about experimental methodology and design as well as early experience with Jest and the Enzyme library",
+		"Adapted to work in both the product's legacy codebase (JavaScript, jQuery) and modern codebase (TypeScript, React, Jest)",
+		"Contributed to a performance effort that resulted in a 50% Apdex improvement in the team's main feature area",
+		"Served as feature lead for displaying work rollup progress on Azure DevOps backlogs",
+	    "Monitored live sight health, managed and tuned automated alerts, facilitated daily stand-up, and worked to resolve bugs and customer issues during on-call engineer rotations"]
+	);
+	this.experiences[1] = new Experience('Square', 'San Francisco, CA', 'Software Engineer Intern',
 		'June 2017', 'September 2017',
 		['Wrote and deployed industry-standard code in a fast-paced, agile development workflow',
-		'Implemented an interactive widget as a tool for Square\'s API documentation website using Ruby on Rails, JavaScript, HTML, Sass, and Square\'s e-commerce Rails SDK',
-		'Placed third in Intern Hack Week by using Ruby on Rails, MySQL, Slim, HTML, and SCSS to add automated and custom visual achievement badges to Square\'s internal corporate directory with two other interns']);
-	this.experiences[1] = new Experience('Google', 'Seattle, WA', 'Engineering Practicum Intern',
+		'Implemented an interactive widget as a tool for Square\'s API documentation website using Ruby on Rails, JavaScript, HTML, Sass, and Square\'s e-commerce Rails SDK']);
+	this.experiences[2] = new Experience('Google', 'Seattle, WA', 'Engineering Practicum Intern',
 		'June 2016', 'September 2016',
 		["Built a guided flow that allows Cloud Launcher solution partners to control the configuration options available to the customers deploying these solutions",
 		"Used HTML, CSS, JavaScript, and AngularJS to build the front-end structure of the configuration editor according to UX mocks as well as implement dynamic use of back-end data about the solution configuration"]);
-	this.experiences[2] = new Experience('Google', 'Mountain View, CA', 'Engineering Practicum Intern',
+	this.experiences[3] = new Experience('Google', 'Mountain View, CA', 'Engineering Practicum Intern',
 		'June 2015', 'September 2015',
 		["Enhanced code that displays knowledge graph facts to support subscripts and superscripts across multiple platforms by enriching protocol buffers as well as updating templates through a template-rendering engine",
 		"Implemented a Java handler for electron shell configuration and chemical formula knowledge graph facts to add and render the appropriate subscript/superscript information"]);
 
 	this.activities = new Array();
 	this.activities[0] = new Activity("The Communication and Learning Lab,", "Chicago, IL", "Honors Thesis Researcher", "Winter 2017 - Spring 2018", "http://callab.uchicago.edu/");
-	this.activities[1] = new Activity("University of Chicago Cheer Squad,", "Chicago, IL", "Secretary / Member / Former Captain", "Fall 2014 - Winter 2018", "http://cheerleading.uchicago.edu/");
-	this.activities[2] = new Activity("Grace Hopper Celebration of Women in Technology", "", "Google Grant Recipient", "October 2015, 2016", "http://ghc.anitaborg.org/");
-	this.activities[3] = new Activity("The Infant Learning and Development Lab,", "Chicago, IL", "Research Assistant", "Fall 2015 - Fall 2016", "http://woodwardlab.uchicago.edu/");
-	this.activities[4] = new Activity("Computer Science Summer Institute,", "Google, Seattle, WA", "Participant", "July - August 2014", "https://www.google.com/edu/resources/programs/computer-science-summer-institute/");
+	this.activities[1] = new Activity("Grace Hopper Celebration of Women in Technology", "", "Google Grant Recipient", "October 2015, 2016", "http://ghc.anitaborg.org/");
+	this.activities[2] = new Activity("The Infant Learning and Development Lab,", "Chicago, IL", "Research Assistant", "Fall 2015 - Fall 2016", "http://woodwardlab.uchicago.edu/");
+	this.activities[3] = new Activity("Computer Science Summer Institute,", "Google, Seattle, WA", "Participant", "July - August 2014", "https://www.google.com/edu/resources/programs/computer-science-summer-institute/");
+
+	this.projects = new Array();
+	this.projects.push(new Project(
+		"Parent Response Times as Negative Evidence for Grammar Learning",
+		"",
+		"CALLab, The University of Chicago",
+		"Spring 2017 - Summer 2018",
+		["Psychology B.A. honors thesis project - Python, HTML/CSS/JavaScript, R, Amazon Mechanical Turk",
+		"Used Python to process XML data from three large natural language corpora to perform statistical analyses on parent-child speech interactions",
+		"Designed and implemented a remote, online self-paced reading experiment to investigate mental processing of ungrammatical utterances",
+		"Received Outstanding Poster award at the 2018 Midwest Cognitive Science Conference"]
+	));
+	this.projects.push(new Project(
+		'Intern Hack Week - Achievement Badges',
+		"",
+		"Square",
+		"Summer 2017",
+		["Teamed up with two fellow interns to display automated and custom visual achievement badges on user pages in Square's internal corporate directory - Ruby on Rails, MySQL, Slim, HTML, SCSS ",
+		"Awarded third place in Intern Hack Week"]
+	));
+	this.projects.push(new Project(
+		'UC Cheer Website',
+		"http://emrusso.github.io/uccheer/index.html",
+		"" /* location */,
+		'Spring 2017',
+		["An updated look for the UChicago Cheerleading team's website - HTML/CSS, AngularJS"]
+	));
+	this.projects.push(new Project(
+		'Life of the Mind',
+		"http://devpost.com/software/life-of-the-mind",
+		"Uncommon Hacks",
+		'Spring 2016',
+		["Game controlled by Muse headband speedometer and EEG data - Unity game engine, C#, Muse",
+		'Awarded "Most UChicago" prize']
+	));
+	this.projects.push(new Project(
+		'Telephone',
+		"http://telephone-cssi2014.appspot.com",
+		'Computer Science Summer Institute',
+		'August 2014',
+		['Online game of Telephone - HTML/CSS/JavaScript, Python, jinja2, Google App Engine (Python)']
+	));
+
 
 	$scope.techSkillsAsString = function(arr) {
 		var str = arr[0];
@@ -67,4 +118,12 @@ var Activity = function(name, location, position, date, link) {
 	this.position = position;
 	this.date = date;
 	this.link = link;
+}
+
+var Project = function(title, link, location, date, details) {
+	this.title = title;
+	this.link = link;
+	this.location = location;
+	this.date = date;
+	this.details = details;
 }

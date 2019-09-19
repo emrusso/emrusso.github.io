@@ -61,10 +61,10 @@
                 </div>
             </div>
             <div id="contact">
-                <h4><a href="mailto:erusso@uchicago.edu">erusso@uchicago.edu</a></h4>
+                <h4><a href="mailto:emmi@emmi.dev">emmi@emmi.dev</a></h4>
                 <h4>(303) - 884 - 1425</h4>
                 <h4><a href="Emmi_Russo_Resume_Technical.pdf">PDF Resume</a></h4>
-                <h4><a href="https://emrusso.github.io">emrusso.github.io</a></h4>
+                <h4><a href="https://emmi.dev">emmi.dev</a></h4>
             </div>
         </div>
         <div class="content-container">
@@ -75,7 +75,7 @@
         </h5>
                 <h5><em>B.S. in Computer Science</em></h5>
                 <h5><em>B.A. in Psychology with Honors</em></h5>
-                <h5><strong>Honors:</strong>&nbspGraduated with general honors, Dean's List (2015, 2016, 2018), Psi Chi Honor Society, Midwest Cognitive Science Conference 2018 Outstanding Poster award</h5>
+                <h5><strong>Honors:</strong>&nbspGraduated with general honors, Dean's List (2015, 2016, 2018), Psi Chi Honor Society</h5>
             </div>
             <div class="second">
                 <h3>Technical Skills</h3>
@@ -105,25 +105,19 @@
             </div>
             <div class="fourth">
                 <h3>Projects</h3>
-                <h5><strong><a href="http://devpost.com/software/life-of-the-mind" target="_blank">Life of the Mind</a></strong> - <em>Uncommon Hacks</em>
-        <span class="right">Spring 2016</span>
-      </h5>
-                <ul>
-                    <li>Game controlled by Muse headband speedometer and EEG data - Unity game engine, C#, Muse</li>
-                    <li>Awarded "Most UChicago" prize</li>
-                </ul>
-                <h5><strong><a href="http://emrusso.github.io/uccheer/index.html" target="_blank">UC Cheer Website</a></strong>
-        <span class="right">Spring 2015</span>
-      </h5>
-                <ul>
-                    <li>An updated look for the UChicago Cheerleading team's website - HTML5, CSS3, AngularJS</li>
-                </ul>
-                <h5><strong><a href="http://telephone-cssi2014.appspot.com" target="_blank">Telephone</a></strong> - <em>Computer Science Summer Institute</em>
-        <span class="right">August 2014</span>
-      </h5>
-                <ul>
-                    <li>Online game of Telephone - JavaScript, Python, HTML5, CSS3, jinja2, Google App Engine (Python)</li>
-                </ul>
+                <div ng-repeat="project in resumeCtrl.projects">
+                    <h5>
+                        <strong>
+                            <a ng-if="project.link" href="{{ project.link }}" target="_blank">{{ project.title }}</a>
+                            <span ng-if="!project.link">{{ project.title }}</span>
+                        </strong>
+                        <span ng-if="project.location"> - <em>{{ project.location }}</em></span>
+                        <span class="right">{{ project.date }}</span>    
+                    </h5>
+                    <ul>
+                        <li ng-repeat="detail in project.details">{{ detail }}</li>
+                    </ul>
+                </div>
             </div>
             <div class="fifth">
                 <h3>Leadership &amp; Activities</h3>
@@ -136,18 +130,18 @@
     </div>
     <div ng-if="resumeCtrl.isMobile" class="mobile-site">
         <div class="mobile-name-banner"><strong><div>Hello, I'm</div><div>Emmi Russo!</div></strong></div> 
-        <div class="mobile-blurb mobile-first">I'm a fourth year undergraduate at UChicago studying Computer Science and Psychology.</div>
+        <div class="mobile-blurb mobile-first">I'm a software engineer on the Microsoft Azure DevOps reporting team. I studied computer science and psychology at the University of Chicago.</div>
         <div class="mobile-blurb mobile-second">
             <ul>Here are a few things I really enjoy:
                 <li>Making websites</li>
-                <li>Cheerleading</li>
-                <li>Researching language development</li>
                 <li>Petting dogs</li>
                 <li>Solving puzzles</li>
+                <li>Playing games</li>
+                <li>Learning new things</li>
             </ul>
         </div>
         <div class="mobile-blurb mobile-third">
-            See my <a href="Emmi_Russo_Resume_Technical.pdf">resume</a> or <a href="mailto:erusso@uchicago.edu">contact me</a> if you would like to know more about me!
+            See my <a href="Emmi_Russo_Resume_Technical.pdf">resume</a> or <a href="mailto:emmi@emmi.dev">contact me</a> if you would like to know more about me!
         </div>
     </div>
 </body>
