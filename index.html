@@ -28,13 +28,15 @@
         {"main": "#ff5e5e", "hover": "#f70000"}];
 
         $(function(){
-            var colorScheme = colors[Math.floor(Math.random() * colors.length)];
+            var colorIndex = Math.floor(Math.random() * colors.length);
+            var colorScheme = colors[colorIndex];
             var mainColor = colorScheme["main"];
             var hoverColor = colorScheme["hover"];
 
             var gradient = "linear-gradient(0deg, " + hoverColor + ", " + mainColor + ")";
 
-            $("#name-container").css("background", gradient);
+            $("#name-container").css("background", gradient).addClass("theme-" + colorIndex);
+            $("#name-container-popout").addClass("theme-" + colorIndex);
             $(".mobile-name-banner").css("background", gradient);
 
             $("a").css("color", mainColor);
@@ -46,18 +48,24 @@
               .mouseleave(function() {
                 $(this).css("color", mainColor);
               }); 
+            
+              $("#name-container").one("webkitAnimationEnd oAnimationEnd msAnimationEnd animationend", function(e) {
+                $("#name-container-popout").addClass("post-load");
+                $("#name-container").addClass("post-load");
+            });
         });
-
     </script>
 </head>
 
 <body ng-controller="ResumeController as resumeCtrl">
     <div id="container" ng-if="!resumeCtrl.isMobile">
         <div id="top">
-            <div id="name-container">
-                <div id="name">
-                    <h1>Emmi</h1>
-                    <h1>Russo</h1>
+            <div id="name-container-popout">
+                <div id="name-container">
+                    <div id="name">
+                        <h1>Emmi</h1>
+                        <h1>Russo</h1>
+                    </div>
                 </div>
             </div>
             <div id="contact">
