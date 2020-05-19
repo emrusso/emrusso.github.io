@@ -1018,6 +1018,11 @@ h2, h3, h4, h5, h6 {
   width: 79%;
 }
 
+#name-container-popout #name-container :hover {
+  -webkit-animation: none;
+  animation: none;
+}
+
 #name-container-popout.post-load #name-container :hover {
   -webkit-animation: none;
   animation: none;

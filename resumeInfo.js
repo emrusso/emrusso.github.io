@@ -12,8 +12,12 @@ angular.module('resumeApp', [])
 
 	
 	this.experiences = new Array();
-	this.experiences[0] = new Experience('Microsoft', 'Redmond, WA', 'Software Engineer',
-		'August 2018', 'Present',
+	this.experiences[0] = new Experience('Brandfolder', 'Denver, CO', 'Full Stack Developer',
+		'November 2019', 'Present',
+		[]
+	);
+	this.experiences[1] = new Experience('Microsoft', 'Redmond, WA', 'Software Engineer',
+		'August 2018', 'November 2019',
 	    ["Developed reporting features across Microsoft's Azure DevOps product by writing and reviewing code as a member of one of its only horizontal teams",
 	    "Collaborated closely with product managers and other engineers from start to finish on features - including spec reviews, development design, development, and post-deployment telemetry to measure success and adoption",
 		"Shared knowledge with teammates about experimental methodology and design as well as early experience with Jest and the Enzyme library",
@@ -22,15 +26,15 @@ angular.module('resumeApp', [])
 		"Served as feature lead for displaying work rollup progress on Azure DevOps backlogs",
 	    "Monitored live sight health, managed and tuned automated alerts, facilitated daily stand-up, and worked to resolve bugs and customer issues during on-call engineer rotations"]
 	);
-	this.experiences[1] = new Experience('Square', 'San Francisco, CA', 'Software Engineer Intern',
+	this.experiences[2] = new Experience('Square', 'San Francisco, CA', 'Software Engineer Intern',
 		'June 2017', 'September 2017',
 		['Wrote and deployed industry-standard code in a fast-paced, agile development workflow',
 		'Implemented an interactive widget as a tool for Square\'s API documentation website using Ruby on Rails, JavaScript, HTML, Sass, and Square\'s e-commerce Rails SDK']);
-	this.experiences[2] = new Experience('Google', 'Seattle, WA', 'Engineering Practicum Intern',
+	this.experiences[3] = new Experience('Google', 'Seattle, WA', 'Engineering Practicum Intern',
 		'June 2016', 'September 2016',
 		["Built a guided flow that allows Cloud Launcher solution partners to control the configuration options available to the customers deploying these solutions",
 		"Used HTML, CSS, JavaScript, and AngularJS to build the front-end structure of the configuration editor according to UX mocks as well as implement dynamic use of back-end data about the solution configuration"]);
-	this.experiences[3] = new Experience('Google', 'Mountain View, CA', 'Engineering Practicum Intern',
+	this.experiences[4] = new Experience('Google', 'Mountain View, CA', 'Engineering Practicum Intern',
 		'June 2015', 'September 2015',
 		["Enhanced code that displays knowledge graph facts to support subscripts and superscripts across multiple platforms by enriching protocol buffers as well as updating templates through a template-rendering engine",
 		"Implemented a Java handler for electron shell configuration and chemical formula knowledge graph facts to add and render the appropriate subscript/superscript information"]);
