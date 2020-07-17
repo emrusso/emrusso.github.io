@@ -24,7 +24,7 @@ angular.module('resumeApp', [])
 		"Adapted to work in both the product's legacy codebase (JavaScript, jQuery) and modern codebase (TypeScript, React, Jest)",
 		"Contributed to a performance effort that resulted in a 50% Apdex improvement in the team's main feature area",
 		"Served as feature lead for displaying work rollup progress on Azure DevOps backlogs",
-	    "Monitored live sight health, managed and tuned automated alerts, facilitated daily stand-up, and worked to resolve bugs and customer issues during on-call engineer rotations"]
+	    "Monitored live site health, managed and tuned automated alerts, facilitated daily stand-up, and worked to resolve bugs and customer issues during on-call engineer rotations"]
 	);
 	this.experiences[2] = new Experience('Square', 'San Francisco, CA', 'Software Engineer Intern',
 		'June 2017', 'September 2017',
