@@ -1,4 +1,4 @@
-import { FunctionComponent, HTMLAttributes, useState } from 'react';
+import { FunctionComponent, HTMLAttributes, ReactNode, useState } from 'react';
 import styled from 'styled-components';
 import { Experiences } from './Experiences';
 import { resumeEntries } from './resume-entries';
@@ -16,6 +16,12 @@ const UnstyledResume: FunctionComponent<ResumeProps> = ({ className }) => {
     setAccordions({ ...accordions, [accordionTitle]: !accordions[accordionTitle] });
   };
 
+  const caret = (accordionTitle: Accordion): ReactNode => (
+    <span className="material-symbols-outlined">
+      {accordions[accordionTitle] ? 'expand_more' : 'navigate_next'}
+    </span>
+  );
+
   return (
     <div className={`resume ${className}`}>
       <section>
@@ -28,7 +34,7 @@ const UnstyledResume: FunctionComponent<ResumeProps> = ({ className }) => {
             onClick={(): void => toggleAccordion('fullTime')}
             type="button"
           >
-            Experience
+            {caret('fullTime')}experience
           </button>
         </h2>
         {accordions['fullTime'] && (
@@ -45,7 +51,7 @@ const UnstyledResume: FunctionComponent<ResumeProps> = ({ className }) => {
             onClick={(): void => toggleAccordion('internships')}
             type="button"
           >
-            Internships
+            {caret('internships')}internships
           </button>
         </h2>
         {accordions['internships'] && (
@@ -59,6 +65,12 @@ const UnstyledResume: FunctionComponent<ResumeProps> = ({ className }) => {
 const StyledResume = styled(UnstyledResume)`
   .resume__heading {
     font-size: 2.5em;
+
+    button {
+      color: ${props => props.theme.iconColor};
+      // text-transform: uppercase;
+      margin-left: -24px; // outdent caret to align headings with name
+    }
   }
 `;
 

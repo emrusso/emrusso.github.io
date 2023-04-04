@@ -51,6 +51,12 @@ const StyledExperiences = styled(UnstyledExperiences)`
     }
   }
 
+  .experience__bullets {
+    &__item {
+      padding-bottom: 10px;
+    }
+  }
+
   .material-symbols-outlined {
     color: ${props => props.theme.iconColor};
   }
