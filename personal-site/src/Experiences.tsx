@@ -8,11 +8,11 @@ interface ExperiencesProps extends HTMLAttributes<HTMLUListElement> {
   experiences: ResumeEntry[];
 }
 
-const UnstyledExperiences: FunctionComponent<ExperiencesProps> = ({ className, experiences }) => {
+const UnstyledExperiences: FunctionComponent<ExperiencesProps> = ({ className, experiences, ...props }) => {
   const { theme } = useContext(ThemeContext);
 
   return (
-    <ul className={`no-list-styling ${className}`}>
+    <ul className={`no-list-styling ${className}`} {...props} >
       {experiences.map(({ company, location, positions, bullets }) => (
         <li className="experience" key={`experience-${company}-${location.city}`}>
           <span>
