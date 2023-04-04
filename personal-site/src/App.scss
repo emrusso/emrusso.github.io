@@ -14,15 +14,13 @@ button {
   text-transform: none;
 }
 
-.theme-controls {
-  display: flex;
-  flex-direction: column;
-
-  &__switch {
-    align-items: center;
-    display: flex;
-    gap: 5px;
-  }
+.sr-only {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
 }
 
 .resume {
