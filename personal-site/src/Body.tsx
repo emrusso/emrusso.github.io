@@ -5,9 +5,9 @@ import { Resume } from './Resume';
 
 interface BodyProps extends HTMLAttributes<HTMLDivElement> {}
 
-const UnstyledBody: FunctionComponent<BodyProps> = ({ className }) => {
+const UnstyledBody: FunctionComponent<BodyProps> = (props) => {
   return (
-    <div className={className}>
+    <div {...props}>
       <ThemeControls />
       <Resume />
     </div>

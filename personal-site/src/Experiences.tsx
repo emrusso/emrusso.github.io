@@ -48,7 +48,7 @@ const UnstyledExperiences: FunctionComponent<ExperiencesProps> = ({ className, e
 };
 
 const StyledExperiences = styled(UnstyledExperiences)`
-.experience {
+  .experience {
     &__location {
       display: block;
       margin-bottom: 5px;

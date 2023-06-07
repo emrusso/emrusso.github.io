@@ -6,10 +6,10 @@ interface TechnicalSkillsProps extends HTMLAttributes<HTMLDivElement> {
   type: string;
 }
 
-const UnstyledTechnicalSkills: FunctionComponent<TechnicalSkillsProps> = ({ className, entries, type }) => {
+const UnstyledTechnicalSkills: FunctionComponent<TechnicalSkillsProps> = ({ entries, type, ...props }) => {
   const id = `tech-skills-order--${type}`;
   return (
-    <div className={className}>
+    <div {...props}>
       <div aria-hidden className="technical-skills__expertise-bar">
       <span className="sr-only" id={id}>Ordered by decreasing level of expertise</span>
       </div>
@@ -51,6 +51,3 @@ const StyledTechnicalSkills = styled(UnstyledTechnicalSkills)`
 export const TechnicalSkills: FunctionComponent<TechnicalSkillsProps> = (props) => (
   <StyledTechnicalSkills {...props} />
 );
-
-
-

@@ -28,6 +28,9 @@ const UnstyledResume: FunctionComponent<ResumeProps> = ({ className }) => {
 }
 
 const StyledResume = styled(UnstyledResume)`
+  margin: auto;
+  max-width: 1000px;
+
   .resume__heading {
     color: ${props => props.theme.iconColor};
     font-size: 2.5em;
