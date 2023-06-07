@@ -23,12 +23,19 @@ const ThemeSwitch: FunctionComponent<ThemeSwitchProps> = ({ label, ...props }) =
   </button>
 );
 
-const UnstyledThemeControls: FunctionComponent<ThemeControlsProps> = ({ className }) => {
+const UnstyledThemeControls: FunctionComponent<ThemeControlsProps> = (props) => {
   const { color, garden, setColor, setGarden } = useContext(ThemeContext);
 
   return (
-    <div className={className}>
-      <h1><strong>Emmi Russo</strong></h1>
+    <div {...props}>
+      <div className="name">
+        <h1><strong>Emmi Russo</strong></h1>
+        <div className="name__links-container">
+          <a href="mailto:emmi@emmi.dev">emmi@emmi.dev</a>
+          |
+          <a href="%PUBLIC_URL%/Emmi_Russo_Technical_Resume_2023.pdf">PDF Resume</a>
+        </div>
+      </div>
       <div className="theme-controls" role="group" aria-labelledby="id-group-label">
         <h2 className="sr-only" id="id-group-label">Theme</h2>
         <ThemeSwitch
@@ -54,9 +61,21 @@ const StyledThemeControls = styled(UnstyledThemeControls)`
   margin: auto;
   max-width: 1000px;
 
-  h1 {
-    font-size: 3em;
-    text-transform: lowercase;
+  .name {
+    h1 {
+      font-size: 3em;
+      margin-bottom: 0;
+      text-transform: lowercase;
+    }
+
+    &__links-container {
+      display: flex;
+      gap: 15px;
+
+      a {
+        color: ${props => props.theme.linkColor}
+      }
+    }
   }
 
   .theme-controls {
