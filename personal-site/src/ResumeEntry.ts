@@ -1,3 +1,5 @@
+import { ReactNode } from "react";
+
 export interface ResumeEntry {
   company: string;
   location: {
@@ -5,10 +7,10 @@ export interface ResumeEntry {
     state: string;
   };
   positions: Array<{
-    title: string;
-    startDate: string;
-    endDate: string;
+    title: ReactNode;
+    startDate?: string;
+    endDate?: string;
   }>
-  bullets: string[];
+  bullets: ReactNode[];
   internship: boolean;
 }

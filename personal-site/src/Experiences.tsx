@@ -15,7 +15,7 @@ const UnstyledExperiences: FunctionComponent<ExperiencesProps> = ({ className, e
     <ul className={`no-list-styling ${className}`} {...props} >
       {experiences.map(({ company, location, positions, bullets }) => (
         <li className="experience" key={`experience-${company}-${location.city}`}>
-          <span>
+          <span className="experience__location">
             <strong>{company},</strong>&nbsp;
             {location.city},&nbsp;{location.state}
           </span>
@@ -23,7 +23,11 @@ const UnstyledExperiences: FunctionComponent<ExperiencesProps> = ({ className, e
             {positions.map((position) => (
               <span className="experience__position" key={`position-${company}-${position.title}`}>
                 <em className="experience__position--title">{position.title}</em>
-                {position.startDate}&nbsp;&#8211;&nbsp;{position.endDate}
+                {position.startDate && (
+                  <>
+                    {position.startDate}&nbsp;&#8211;&nbsp;{position.endDate}
+                  </>
+                )}
               </span>
             ))}
           </>
@@ -44,16 +48,27 @@ const UnstyledExperiences: FunctionComponent<ExperiencesProps> = ({ className, e
 };
 
 const StyledExperiences = styled(UnstyledExperiences)`
-  .experience__position {
-    &--title {
-      background-color: ${props => props.theme.highlightColor};
-      padding: 10px;
+  .experience {
+    &__location {
+      display: block;
+      margin-bottom: 5px;
     }
-  }
 
-  .experience__bullets {
-    &__item {
-      padding-bottom: 10px;
+    &__position {
+      &--title {
+        background-color: ${props => props.theme.highlightColor};
+        padding: 10px;
+      }
+    }
+
+    &__bullets {
+      &__item {
+        padding-bottom: 10px;
+
+        a {
+          color: ${props => props.theme.iconColor}
+        }
+      }
     }
   }
 

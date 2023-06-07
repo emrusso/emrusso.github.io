@@ -17,6 +17,8 @@ const UnstyledBody: FunctionComponent<BodyProps> = ({ className }) => {
 const StyledBody = styled(UnstyledBody)`
   background-color: ${props => props.theme.backgroundColor};
   color: ${props => props.theme.color};
+  height: 100%;
+  min-height: 100vh;
 
   .theme-controls__switch {
     color: ${props => props.theme.color};

@@ -1,74 +1,40 @@
-import { FunctionComponent, HTMLAttributes, ReactNode, useState } from 'react';
+import { FunctionComponent, HTMLAttributes, useState } from 'react';
 import styled from 'styled-components';
-import { Experiences } from './Experiences';
-import { resumeEntries } from './resume-entries';
+import { Accordion, ResumeSection } from './ResumeSection';
 
 interface ResumeProps extends HTMLAttributes<HTMLDivElement> {}
 
-type Accordion = 'fullTime' | 'internships';
-
 const UnstyledResume: FunctionComponent<ResumeProps> = ({ className }) => {
-  const fullTime = resumeEntries.filter(({ internship }) => !internship);
-  const internships = resumeEntries.filter(({ internship }) => !!internship);
-  const [accordions, setAccordions] = useState<Record<Accordion, boolean>>({ fullTime: true, internships: false })
-
-  const toggleAccordion = (accordionTitle: Accordion): void => {
-    setAccordions({ ...accordions, [accordionTitle]: !accordions[accordionTitle] });
-  };
-
-  const caret = (accordionTitle: Accordion): ReactNode => (
-    <span className="material-symbols-outlined">
-      {accordions[accordionTitle] ? 'expand_more' : 'navigate_next'}
-    </span>
-  );
+  const [accordions, setAccordions] = useState<Record<Accordion, boolean>>({
+    education: false,
+    fullTime: true,
+    internships: false,
+    summary: true,
+    technicalSkills: true
+  })
 
   return (
     <div className={`resume ${className}`}>
-      <section>
-        <h2 className="resume__heading">
-          <button
-            aria-controls="full-time"
-            aria-expanded={accordions['fullTime']}
-            className="accordion-trigger"
-            id="full-time-accordion"
-            onClick={(): void => toggleAccordion('fullTime')}
-            type="button"
-          >
-            {caret('fullTime')}experience
-          </button>
-        </h2>
-        {accordions['fullTime'] && (
-          <Experiences experiences={fullTime} id="full-time" aria-labelledby="full-time-accordion" />
-        )}
-      </section>
-      <section>
-        <h2 className="resume__heading">
-          <button
-            aria-controls="internships"
-            aria-expanded={accordions['internships']}
-            className="accordion-trigger"
-            id="internships-accordion"
-            onClick={(): void => toggleAccordion('internships')}
-            type="button"
-          >
-            {caret('internships')}internships
-          </button>
-        </h2>
-        {accordions['internships'] && (
-          <Experiences experiences={internships} id="internships" aria-labelledby="internships-accordion" />
-        )}
-      </section>
+      {['summary', 'education', 'technicalSkills', 'fullTime', 'internships'].map((accordion) => (
+        <ResumeSection
+          accordion={accordion as Accordion}
+          accordions={accordions}
+          setAccordions={setAccordions}
+        />
+      ))}
     </div>
   );
 }
 
 const StyledResume = styled(UnstyledResume)`
   .resume__heading {
+    color: ${props => props.theme.iconColor};
     font-size: 2.5em;
+    font-weight: normal;
 
     button {
       color: ${props => props.theme.iconColor};
-      // text-transform: uppercase;
+      text-transform: lowercase;
       margin-left: -24px; // outdent caret to align headings with name
     }
   }

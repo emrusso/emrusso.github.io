@@ -28,7 +28,7 @@ const UnstyledThemeControls: FunctionComponent<ThemeControlsProps> = ({ classNam
 
   return (
     <div className={className}>
-      <h1>emmi russo</h1>
+      <h1><strong>Emmi Russo</strong></h1>
       <div className="theme-controls" role="group" aria-labelledby="id-group-label">
         <h3 className="sr-only" id="id-group-label">Theme</h3>
         <ThemeSwitch
@@ -57,6 +57,7 @@ const StyledThemeControls = styled(UnstyledThemeControls)`
   h1 {
     font-size: 3em;
     font-family: 'Secular One', sans-serif;
+    text-transform: lowercase;
   }
 
   .theme-controls {

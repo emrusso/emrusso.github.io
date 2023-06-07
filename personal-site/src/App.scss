@@ -1,5 +1,10 @@
+html {
+  height: 100%;
+}
+
 body {
   font-family: "Raleway", sans-serif;
+  min-height: 100%;
 }
 
 button {
@@ -15,21 +20,17 @@ button {
 }
 
 .sr-only {
-  position: absolute;
+  height: 1px;
   left: -10000px;
+  overflow: hidden;
+  position: absolute;
   top: auto;
   width: 1px;
-  height: 1px;
-  overflow: hidden;
 }
 
 .resume {
   margin: auto;
   max-width: 1000px;
-
-  &__heading {
-    text-transform: uppercase;
-  }
 }
 
 .experience {
@@ -47,9 +48,9 @@ button {
       margin: 5px 0;
 
       .material-symbols-outlined {
+        cursor: default;
         font-size: 17px;
         padding-top: 2px;
-        cursor: default;
         user-select: none;
       }
     }
@@ -58,4 +59,9 @@ button {
 
 .no-list-styling {
   list-style: none;
+  padding-inline-start: 0;
+}
+
+#root {
+  height: 100%;
 }

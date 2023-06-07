@@ -1,7 +1,7 @@
 import { ResumeEntry } from "./ResumeEntry";
 
 const brandfolder: ResumeEntry = {
-  company: 'Brandfolder',
+  company: 'Brandfolder by Smartsheet',
   location: {
     city: 'Denver',
     state: 'CO'
@@ -11,12 +11,15 @@ const brandfolder: ResumeEntry = {
     startDate: 'April 2021',
     endDate: 'Present'
   }, {
-    title: 'Full Stack Developer',
+    title: 'Full Stack Developer (Software Engineer II)',
     startDate: 'November 2019',
     endDate: 'April 2021'
   }],
   bullets: [
-    "Organized work, reviewed and contributed code to lead teams of 2-7 software engineers to build and update features core to Brandfolder's offerings. For example, rebuilt the jQuery + slim asset information editing UI to use API-powered React, created a collaborative work management space for in-progress assets, and expanded taxonomy capabilities by supporting multi-value custom fields and automation",
+    <span>Awarded <a href='https://www.smartsheet.com/content-center/executive-center/leadership/meet-our-q1-brightspot-award-winners'>Smartsheet's 2023 Q1 Brightspot award</a> for the 'Earn trust' core competency</span>,
+    "Deployed over 600 pull requests to production",
+    "Migrated Brandfolder's monolith from a custom, inflexible solution to a well-supported internationalization library, significantly improving flexibility and quality of localized content. Became the go-to subject matter expert for all things internationalization",
+    "Organized work, reviewed and contributed code to lead teams of 2-7 software engineers to build and update many features core to Brandfolder's offerings. I excel at modernizing code while maintaining feature parity even for very complex feature sets",
     "Introduced TypeScript to the codebase, significantly improving code quality, durability, and maintainability",
     "Collaborated closely with Product and Customer Experience team members to resolve customer issues weekly",
     "Mentored junior developers and supported coworkers in areas of passions like TypeScript, testing, and accessibility best practices"
@@ -77,7 +80,7 @@ const googleSeattle: ResumeEntry = {
     endDate: 'September 2016'
   }],
   bullets: [
-    'Built a guided flow that allows Cloud Launcher solution partners to control the configuration options available to the customers deploying these solutions',
+    'Launched a guided flow that allows Cloud Launcher solution partners to control the configuration options available to the customers deploying these solutions',
     'Used HTML, CSS, JavaScript, and AngularJS to build the front-end structure of the configuration editor according to UX mocks as well as implement dynamic use of back-end data about the solution configuration'
   ],
   internship: true
@@ -99,6 +102,23 @@ const googleMV: ResumeEntry = {
     'Implemented a Java handler for electron shell configuration and chemical formula knowledge graph facts to add and render the appropriate subscript/superscript information'
   ],
   internship: true
+};
+
+export const education: ResumeEntry = {
+  company: 'The University of Chicago',
+  location: {
+    city: 'Chicago',
+    state: 'IL'
+  },
+  positions: [{
+    title: <span>B.S. &bull; Computer Science</span>,
+    startDate: 'October 2014',
+    endDate: 'June 2018'
+  }, {
+    title: <span>B.A. with Honors &bull; Psychology</span>
+  }],
+  bullets: [],
+  internship: false
 };
 
 export const resumeEntries: ResumeEntry[] = [brandfolder, microsoft, square, googleSeattle, googleMV];
