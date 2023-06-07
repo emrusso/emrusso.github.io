@@ -6,9 +6,11 @@ export interface Theme {
   highlightColor: string;
   icon: string;
   iconColor: string;
+  linkColor: string;
 }
 
 const lightIconColor = '#d97737';
+const lightLinkColor = '#af5f2b';
 const darkIconColor = '#C38B8B';
 
 export const LightTheme: Theme = {
@@ -18,7 +20,8 @@ export const LightTheme: Theme = {
   gradientTopColor: '#FFF275',
   highlightColor: '#FFF275',
   icon: 'add',
-  iconColor: lightIconColor
+  iconColor: lightIconColor,
+  linkColor: lightLinkColor
 };
 
 export const LightGardenTheme: Theme = {
@@ -28,7 +31,8 @@ export const LightGardenTheme: Theme = {
   gradientTopColor: '#F9F5E3',
   highlightColor: '#F9F5E3',
   icon: 'filter_vintage',
-  iconColor: lightIconColor
+  iconColor: lightIconColor,
+  linkColor: lightLinkColor
 };
 
 export const DarkTheme: Theme = {
@@ -39,6 +43,7 @@ export const DarkTheme: Theme = {
   highlightColor: '#c0321f',
   icon: 'add',
   iconColor: darkIconColor,
+  linkColor: darkIconColor
 };
 
 export const DarkGardenTheme: Theme = {
@@ -49,4 +54,5 @@ export const DarkGardenTheme: Theme = {
   highlightColor: '#562C2C',
   icon: 'park',
   iconColor: darkIconColor,
+  linkColor: '#eba6a6'
 }

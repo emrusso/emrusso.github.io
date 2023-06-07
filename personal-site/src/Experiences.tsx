@@ -33,8 +33,8 @@ const UnstyledExperiences: FunctionComponent<ExperiencesProps> = ({ className, e
           </>
           <ul className="experience__bullets no-list-styling">
             {bullets.map((bullet, i) => (
-              <li>
-                <span className="experience__bullets__item" key={`experience-bullet-${company}-${location.city}-${i}`}>
+              <li key={`experience-bullet-${company}-${location.city}-${i}`}>
+                <span className="experience__bullets__item">
                   <span aria-hidden className="material-symbols-outlined">{theme.icon}</span>
                   <span>{bullet}</span>
                 </span>
@@ -48,13 +48,16 @@ const UnstyledExperiences: FunctionComponent<ExperiencesProps> = ({ className, e
 };
 
 const StyledExperiences = styled(UnstyledExperiences)`
-  .experience {
+.experience {
     &__location {
       display: block;
       margin-bottom: 5px;
     }
 
     &__position {
+      display: flex;
+      justify-content: space-between;
+
       &--title {
         background-color: ${props => props.theme.highlightColor};
         padding: 10px;
@@ -62,11 +65,23 @@ const StyledExperiences = styled(UnstyledExperiences)`
     }
 
     &__bullets {
+      padding-inline-start: 10px;
+
       &__item {
+        display: flex;
+        gap: 25px;
+        margin: 5px 0;
         padding-bottom: 10px;
 
         a {
-          color: ${props => props.theme.iconColor}
+          color: ${props => props.theme.linkColor}
+        }
+
+        .material-symbols-outlined {
+          cursor: default;
+          font-size: 17px;
+          padding-top: 2px;
+          user-select: none;
         }
       }
     }

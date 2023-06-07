@@ -13,7 +13,7 @@ const UnstyledTechnicalSkills: FunctionComponent<TechnicalSkillsProps> = ({ clas
       <div aria-hidden className="technical-skills__expertise-bar">
       <span className="sr-only" id={id}>Ordered by decreasing level of expertise</span>
       </div>
-      <ul aria-describedby={id} className={`${type} no-list-styling`}>
+      <ul aria-describedby={id} className={`${type} no-list-styling technical-skills--mono`}>
         {entries.map((entry) => (
           <li key={`${type}-entry-${entry}`}>{entry}</li>
         ))}

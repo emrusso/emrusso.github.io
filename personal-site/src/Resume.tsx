@@ -17,6 +17,7 @@ const UnstyledResume: FunctionComponent<ResumeProps> = ({ className }) => {
     <div className={`resume ${className}`}>
       {['summary', 'education', 'technicalSkills', 'fullTime', 'internships'].map((accordion) => (
         <ResumeSection
+          key={accordion}
           accordion={accordion as Accordion}
           accordions={accordions}
           setAccordions={setAccordions}

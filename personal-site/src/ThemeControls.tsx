@@ -30,7 +30,7 @@ const UnstyledThemeControls: FunctionComponent<ThemeControlsProps> = ({ classNam
     <div className={className}>
       <h1><strong>Emmi Russo</strong></h1>
       <div className="theme-controls" role="group" aria-labelledby="id-group-label">
-        <h3 className="sr-only" id="id-group-label">Theme</h3>
+        <h2 className="sr-only" id="id-group-label">Theme</h2>
         <ThemeSwitch
           aria-checked={color === 'dark'}
           label={'dark mode'}
@@ -56,7 +56,6 @@ const StyledThemeControls = styled(UnstyledThemeControls)`
 
   h1 {
     font-size: 3em;
-    font-family: 'Secular One', sans-serif;
     text-transform: lowercase;
   }
 

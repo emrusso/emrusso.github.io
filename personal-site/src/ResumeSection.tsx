@@ -37,7 +37,7 @@ const accordionProps: Record<Accordion, AccordionProps> = {
     title: 'Internships'
   },
   summary: {
-    content: "Emmi here! I'm a full-stack developer with 6 years of professional experience. I'm known on my team for thoughtful code reviews, strong empathy for users and teammates alike, and glue work that keeps everyone on the same page. My passions at work are type systems, testing, and accessibility. My passions outside of work are video games, podcasts, developmental psychology, and my three-year-old Corgi, Maisie.",
+    content: "Emmi here! I'm a full-stack developer with 6 years of professional experience. I'm known on my team for thoughtful code reviews, strong empathy for users and teammates alike, and glue work that keeps everyone on the same page. My passions at work are type systems, testing, and accessibility. Outside of work I like to play video games, listen to podcasts, and pester my three-year-old Corgi, Maisie.",
     id: 'summary',
     title: 'Summary'
   },
@@ -86,10 +86,9 @@ const UnstyledResumeSection: FunctionComponent<ResumeSectionProps> = ({ accordio
             <TechnicalSkills entries={tools} type="tools" />
           </div>
           <div className="technical-skills__old">
-            Here's a list of things I used to be pretty good at but no longer actively use:
-            <ul className="no-list-styling">
-              {old.map((oldLanguage) => (<li key={`old-language-${oldLanguage}`}>{oldLanguage}</li>))}
-            </ul>
+            The following tools I've worked with in the past but no longer actively use:
+            <br />
+            <span className="technical-skills--mono">{old.join(', ')}</span>
           </div>
         </div>
       )}
@@ -107,6 +106,10 @@ const StyledResumeSection = styled(UnstyledResumeSection)`
 
   .technical-skills__old {
     margin-top: 15px;
+  }
+
+  .technical-skills--mono {
+    font-family: 'Space Mono', monospace;
   }
 `;
 

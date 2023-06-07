@@ -19,6 +19,7 @@ const StyledBody = styled(UnstyledBody)`
   color: ${props => props.theme.color};
   height: 100%;
   min-height: 100vh;
+  padding-bottom: 20px;
 
   .theme-controls__switch {
     color: ${props => props.theme.color};

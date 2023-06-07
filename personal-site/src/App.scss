@@ -33,29 +33,29 @@ button {
   max-width: 1000px;
 }
 
-.experience {
-  &__position {
-    display: flex;
-    justify-content: space-between;
-  }
+// .experience {
+//   &__position {
+//     display: flex;
+//     justify-content: space-between;
+//   }
 
-  &__bullets {
-    padding-inline-start: 10px;
+//   &__bullets {
+//     padding-inline-start: 10px;
 
-    &__item {
-      display: flex;
-      gap: 25px;
-      margin: 5px 0;
+//     &__item {
+//       display: flex;
+//       gap: 25px;
+//       margin: 5px 0;
 
-      .material-symbols-outlined {
-        cursor: default;
-        font-size: 17px;
-        padding-top: 2px;
-        user-select: none;
-      }
-    }
-  }
-}
+//       .material-symbols-outlined {
+//         cursor: default;
+//         font-size: 17px;
+//         padding-top: 2px;
+//         user-select: none;
+//       }
+//     }
+//   }
+// }
 
 .no-list-styling {
   list-style: none;
