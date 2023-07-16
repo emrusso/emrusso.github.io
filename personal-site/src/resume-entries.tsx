@@ -2,10 +2,7 @@ import { ResumeEntry } from "./ResumeEntry";
 
 const brandfolder: ResumeEntry = {
   company: 'Brandfolder by Smartsheet',
-  location: {
-    city: 'Denver',
-    state: 'CO'
-  },
+  location: 'Denver, CO',
   positions: [{
     title: 'Senior Software Engineer I',
     startDate: 'April 2021',
@@ -29,10 +26,7 @@ const brandfolder: ResumeEntry = {
 
 const microsoft: ResumeEntry = {
   company: 'Microsoft',
-  location: {
-    city: 'Redmond',
-    state: 'WA'
-  },
+  location: 'Redmond, WA',
   positions: [{
     title: 'Software Engineer I',
     startDate: 'August 2018',
@@ -52,10 +46,7 @@ const microsoft: ResumeEntry = {
 
 const square: ResumeEntry = {
   company: 'Square',
-  location: {
-    city: 'San Francisco',
-    state: 'CA'
-  },
+  location: 'San Francisco, CA',
   positions: [{
     title: 'Software Engineer Intern',
     startDate: 'June 2017',
@@ -70,10 +61,7 @@ const square: ResumeEntry = {
 
 const googleSeattle: ResumeEntry = {
   company: 'Google',
-  location: {
-    city: 'Seattle',
-    state: 'WA'
-  },
+  location: 'Seattle, WA',
   positions: [{
     title: 'Engineering Practicum Intern',
     startDate: 'June 2016',
@@ -88,10 +76,7 @@ const googleSeattle: ResumeEntry = {
 
 const googleMV: ResumeEntry = {
   company: 'Google',
-  location: {
-    city: 'Mountain View',
-    state: 'CA'
-  },
+  location: 'Mountain View, CA',
   positions: [{
     title: 'Engineering Practicum Intern',
     startDate: 'June 2015',
@@ -106,10 +91,7 @@ const googleMV: ResumeEntry = {
 
 export const education: ResumeEntry = {
   company: 'The University of Chicago',
-  location: {
-    city: 'Chicago',
-    state: 'IL'
-  },
+  location: 'Chicago, IL',
   positions: [{
     title: <span>B.S. &bull; Computer Science</span>,
     startDate: 'October 2014',

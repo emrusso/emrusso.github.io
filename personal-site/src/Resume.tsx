@@ -6,16 +6,18 @@ interface ResumeProps extends HTMLAttributes<HTMLDivElement> {}
 
 const UnstyledResume: FunctionComponent<ResumeProps> = ({ className }) => {
   const [accordions, setAccordions] = useState<Record<Accordion, boolean>>({
-    education: false,
-    fullTime: true,
+    education: true,
+    fullTime: false,
     internships: false,
+    research: true,
     summary: true,
-    technicalSkills: true
+    technicalSkills: true,
+    researchInterests: true
   })
 
   return (
     <div className={`resume ${className}`}>
-      {['summary', 'education', 'technicalSkills', 'fullTime', 'internships'].map((accordion) => (
+      {['summary', 'researchInterests', 'education', 'technicalSkills', 'research', 'fullTime', 'internships'].map((accordion) => (
         <ResumeSection
           key={accordion}
           accordion={accordion as Accordion}
