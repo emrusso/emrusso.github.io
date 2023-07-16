@@ -14,10 +14,10 @@ const UnstyledExperiences: FunctionComponent<ExperiencesProps> = ({ className, e
   return (
     <ul className={`no-list-styling ${className}`} {...props} >
       {experiences.map(({ company, location, positions, bullets }) => (
-        <li className="experience" key={`experience-${company}-${location.city}`}>
+        <li className="experience" key={`experience-${company}-${location}`}>
           <span className="experience__location">
             <strong>{company},</strong>&nbsp;
-            {location.city},&nbsp;{location.state}
+            {location}
           </span>
           <>
             {positions.map((position) => (
@@ -33,7 +33,7 @@ const UnstyledExperiences: FunctionComponent<ExperiencesProps> = ({ className, e
           </>
           <ul className="experience__bullets no-list-styling">
             {bullets.map((bullet, i) => (
-              <li key={`experience-bullet-${company}-${location.city}-${i}`}>
+              <li key={`experience-bullet-${company}-${location}-${i}`}>
                 <span className="experience__bullets__item">
                   <span aria-hidden className="material-symbols-outlined">{theme.icon}</span>
                   <span>{bullet}</span>

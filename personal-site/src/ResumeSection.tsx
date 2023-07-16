@@ -1,11 +1,12 @@
 import { Dispatch, FunctionComponent, HTMLAttributes, ReactNode, SetStateAction } from 'react';
-import { ResumeEntry } from './ResumeEntry';
+import { ResearchExperience, ResumeEntry } from './ResumeEntry';
 import { Experiences } from './Experiences';
 import { education, resumeEntries } from './resume-entries';
 import { TechnicalSkills } from './TechnicalSkills';
 import styled from 'styled-components';
+import { researchExperiences } from './research-experience';
 
-export type Accordion = 'education' | 'fullTime' | 'internships' | 'summary' | 'technicalSkills';
+export type Accordion = 'education' | 'fullTime' | 'internships' | 'summary' | 'technicalSkills' | 'researchInterests' | 'research';
 
 interface AccordionProps {
   id: string;
@@ -29,7 +30,12 @@ const accordionProps: Record<Accordion, AccordionProps> = {
   fullTime: {
     experiences: fullTime,
     id: 'full-time',
-    title: 'Experience'
+    title: 'Professional Experience'
+  },
+  research: {
+    experiences: researchExperiences,
+    id: 'research',
+    title: 'Research Experience'
   },
   internships: {
     experiences: internships,
@@ -47,6 +53,11 @@ const accordionProps: Record<Accordion, AccordionProps> = {
     old: ['jQuery', 'AngularJS', 'C', 'Java', 'Python', 'R', 'SML'],
     id: 'technical-skills',
     title: 'Technical Skills'
+  },
+  researchInterests: {
+    content: "My interests revolve around the cognition of preschool-aged children and their interactions with machines, specifically in the context of play. I am interested in learning and cognitive development via play and how it intersects with technology, particularly video games and mobile applications. As a professional software engineer, I strongly desire to use my skills to build impactful technology in a research-informed manner.",
+    id: 'research-interests',
+    title: 'Research Interests'
   }
 }
 

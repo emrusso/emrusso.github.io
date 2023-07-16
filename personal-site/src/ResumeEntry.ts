@@ -1,16 +1,19 @@
 import { ReactNode } from "react";
 
+interface Position {
+  title: ReactNode;
+  startDate?: string;
+  endDate?: string;
+}
+
 export interface ResumeEntry {
   company: string;
-  location: {
-    city: string;
-    state: string;
-  };
-  positions: Array<{
-    title: ReactNode;
-    startDate?: string;
-    endDate?: string;
-  }>
+  location: string;
+  positions: Position[];
   bullets: ReactNode[];
-  internship: boolean;
+  internship?: boolean;
+}
+
+export interface ResearchExperience extends ResumeEntry{
+  pi: string;
 }
